@@ -78,13 +78,17 @@
   .shot { border-radius:12px; overflow:hidden; border:1px solid var(--night-line); box-shadow:0 30px 70px rgba(0,0,0,.5); background:#fff; }
   .shot img { width:100%; }
 
-  section { padding:84px 0; }
+  section { padding:68px 0; }
+  section .eyebrow, section h2, section .lead, section .note { text-align:center; margin-left:auto; margin-right:auto; }
+  section .lead { max-width:44rem; }
+  h1, h2, h3, .lead { text-wrap:balance; } p, li, figcaption { text-wrap:pretty; }
   .hero .wrap > *, .grid > *, .steps > *, .showcase > *, .dl > * { min-width:0; }
   section.alt { background:var(--bg-alt); }
-  .grid { display:grid; gap:18px; margin-top:34px; }
+  .grid { display:grid; gap:18px; margin-top:30px; }
   .g3 { grid-template-columns:repeat(3,1fr); } .g2 { grid-template-columns:repeat(2,1fr); }
   .card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); }
-  .card p { color:var(--ink-2); margin:0; font-size:16px; }
+  .card p { color:var(--ink-2); margin:0; font-size:16px; line-height:1.6; }
+  .card h3 { font-size:23px; }
   .ic { width:38px; height:38px; border-radius:10px; background:var(--brass-soft); color:var(--brass); display:grid; place-items:center; margin-bottom:14px; }
   .ic svg { width:22px; height:22px; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
   .steps { counter-reset:s; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:34px; }
@@ -156,7 +160,7 @@
       <p class="small" id="dl-line">Windows 10 and 11, 64-bit. Pilot build.</p>
     </div>
     <div class="shot">
-      <picture><source srcset="assets/screens/home-dark.png" media="(prefers-color-scheme: dark)"><img src="assets/screens/home-light.png" width="1360" height="820" alt="The Jharokha Remote home screen: your ID and the box to connect to another computer"></picture>
+      <picture><source srcset="assets/screens/hero-dark-v2.png" media="(prefers-color-scheme: dark)"><img src="assets/screens/hero-light-v2.png" width="1100" height="700" alt="The Jharokha Remote home screen: your ID and the box to connect to another computer"></picture>
     </div>
   </div>
 </div>
@@ -165,14 +169,14 @@
   <div class="wrap">
     <div class="eyebrow">What it does</div>
     <h2>Simple to use, careful by default</h2>
-    <p class="lead">Give someone your nine-digit ID, or type theirs. The rest is a question the owner answers.</p>
+    <p class="lead">Give someone your nine-digit ID, or type theirs. The owner answers the rest.</p>
     <div class="grid g3">
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3>Connect with a number</h3><p>Every computer has a nine-digit ID. No account is needed, and no address or port to set up.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Look first, control if allowed</h3><p>A viewer starts by looking. Control of the mouse and keyboard is something the owner switches on, and can switch off again at any moment.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/></svg></div><h3>Two kinds of password</h3><p>A temporary password that works once for a short time, for helping a friend. A permanent password you set yourself, for your own computers.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Asks first</h3><p>A window on the computer being reached tells its owner who is asking and waits for Allow or Decline. Mouse and keyboard, copy and paste, and sound start ticked, so nobody has to find them; untick what you do not want to share.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div><h3>An activity log on the computer</h3><p>Connections are written to a log on the computer being reached. If the log cannot be written, sharing stays off rather than running unrecorded.</p></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5l2 2M20 4v5h-5M20 12a8 8 0 01-14 5l-2-2M4 20v-5h5"/></svg></div><h3>Updates that are checked</h3><p>The app can update itself. Each update is signed, the program checks the signature and the file before installing, and it goes back to the old version if the new one does not start.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></div><h3>Connect with a number</h3><p>Every computer has a nine-digit ID. No account, address or port to set up.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Look first, control if allowed</h3><p>Viewers start by looking. The owner switches mouse and keyboard control on, and off again, at any moment.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3"/></svg></div><h3>Two kinds of password</h3><p>A temporary one that works once, for helping a friend. A permanent one you set, for your own computers.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Asks first</h3><p>A window on the computer being reached shows who is asking and waits for Allow or Decline. Everything starts ticked; untick what you do not want to share.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 4h12v16H6z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div><h3>An activity log on the computer</h3><p>Connections are recorded on the computer being reached. If the log cannot be written, sharing stays off.</p></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5l2 2M20 4v5h-5M20 12a8 8 0 01-14 5l-2-2M4 20v-5h5"/></svg></div><h3>Updates that are checked</h3><p>Updates are signed and checked before installing, and the old version comes back if the new one does not start.</p></div>
     </div>
   </div>
 </section>
@@ -182,13 +186,13 @@
     <div class="eyebrow">How it works</div>
     <h2>Three steps, and the owner is in charge</h2>
     <div class="steps">
-      <div class="step"><h3>Install and share your ID</h3><p>Install Jharokha on the computer you want to reach. It shows an ID such as <span class="id">874 102 936</span> and can make a temporary password.</p></div>
-      <div class="step"><h3>Connect from another computer</h3><p>On the other computer, open Jharokha, type the ID and the password, and press Next. The owner sees who is asking.</p></div>
-      <div class="step"><h3>The owner decides</h3><p>They press Allow or Decline. During the session they can pause control, or end it, from a bar that is always on their screen.</p></div>
+      <div class="step"><h3>Install and share your ID</h3><p>Install Jharokha on the computer you want to reach. It shows an ID like <span class="id">874 102 936</span> and makes a temporary password.</p></div>
+      <div class="step"><h3>Connect from another computer</h3><p>On the other computer, type the ID and the password, then press Next. The owner sees who is asking.</p></div>
+      <div class="step"><h3>The owner decides</h3><p>They press Allow or Decline. A bar on their screen lets them pause control or end the session at any time.</p></div>
     </div>
     <div class="showcase">
-      <figure><div class="frame"><img src="assets/screens/devices-light.png" width="1360" height="820" loading="lazy" alt="The Devices page with saved computers"></div><figcaption>Saved computers with a name and a note, so the next connection is two clicks.</figcaption></figure>
-      <figure><div class="frame"><img src="assets/screens/settings-light.png" width="1360" height="820" loading="lazy" alt="The Settings page"></div><figcaption>Settings: updates, passwords, privacy and the connection to the server.</figcaption></figure>
+      <figure><div class="frame"><img src="assets/screens/devices-v2.png" width="940" height="640" loading="lazy" alt="The Devices page with saved computers"></div><figcaption>Saved computers, with a name and a note for each: the next connection is two clicks.</figcaption></figure>
+      <figure><div class="frame"><img src="assets/screens/password-v2.png" width="940" height="640" loading="lazy" alt="Your ID and a temporary password on the home screen"></div><figcaption>Your ID and a temporary password, ready to give to the person who is helping you.</figcaption></figure>
     </div>
     <p class="note">The pictures are the real Jharokha window with made-up data (the IDs and names are examples).</p>
   </div>
@@ -198,12 +202,12 @@
   <div class="wrap">
     <div class="eyebrow">Safety</div>
     <h2>What the design promises</h2>
-    <p class="lead">Remote access is only worth having if you can trust who is on the other end. These are the rules the product is built around.</p>
+    <p class="lead">Remote access is only worth having if you can trust who is on the other end.</p>
     <div class="grid g2">
-      <div class="card"><h3>Passwords stay off the server</h3><p>Passwords are never sent to the Jharokha server. The two computers prove they both know the password to each other, and nobody in between learns it.</p></div>
-      <div class="card"><h3>The server cannot see your screen</h3><p>The screen travels between the two computers, encrypted. The server only helps them find each other. When a direct path is not possible, a relay passes the data on without being able to read it.</p></div>
-      <div class="card"><h3>No hints for guessers</h3><p>If an ID does not exist, is switched off or is busy, the answer looks the same. Someone guessing IDs learns nothing about which ones are real.</p></div>
-      <div class="card"><h3>Stopping is always one click away</h3><p>The computer being viewed shows when someone is connected and lets its owner end the session or pause control, whatever the viewer does.</p></div>
+      <div class="card"><h3>Passwords stay off the server</h3><p>Passwords are never sent to the Jharokha server. The two computers prove to each other that they know it.</p></div>
+      <div class="card"><h3>The server cannot see your screen</h3><p>The screen travels between the two computers, encrypted. A relay, when one is needed, cannot read it.</p></div>
+      <div class="card"><h3>No hints for guessers</h3><p>An ID that does not exist, is switched off or is busy gets the same answer, so guessing IDs reveals nothing.</p></div>
+      <div class="card"><h3>Stopping is always one click away</h3><p>The viewed computer shows who is connected and lets its owner end the session or pause control.</p></div>
     </div>
     <p class="note">Jharokha is a pilot product. It has not been through an independent security audit.</p>
   </div>
@@ -228,7 +232,7 @@
   <div class="wrap">
     <div class="eyebrow">Download</div>
     <h2>Get Jharokha Remote</h2>
-    <p class="lead">One installer sets up both parts: the host (so others can reach this computer) and the viewer (so you can reach theirs).</p>
+    <p class="lead">One installer sets up both parts: the host, so others can reach this computer, and the viewer, so you can reach theirs.</p>
     <div class="dl">
       <div class="big">
         <h3>Windows installer</h3>
