@@ -2,6 +2,8 @@
 
 Built installers for Jharokha Remote, a Windows remote-desktop product. **No source code lives here**; the source is in a private repository.
 
+**Website:** <https://mcankalx.github.io/jharokha-releases/>
+
 **Download:** [latest release](https://github.com/mcankalx/jharokha-releases/releases/latest). Other versions are under [Releases](https://github.com/mcankalx/jharokha-releases/releases). Check the SHA-256 in the release notes against the file you downloaded before you install it.
 
 ## Read this before you install
