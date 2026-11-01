@@ -127,7 +127,11 @@
     .hero .wrap, .g3, .g2, .steps, .showcase, .dl { grid-template-columns:1fr; }
     .links a:not(.btn) { display:none; }
     section { padding:60px 0; } .hero .wrap { padding-top:48px; padding-bottom:48px; }
-    .compare th:nth-child(3),.compare td:nth-child(3) { display:none; }
+    .compare thead { display:none; }
+    .compare, .compare tbody, .compare tr, .compare td { display:block; width:auto; }
+    .compare tr { padding:6px 0; border-bottom:1px solid var(--line); } .compare tr:last-child { border-bottom:0; }
+    .compare td { border:0; padding:6px 18px; } .compare td:first-child { width:auto; padding-top:12px; color:var(--brass); font-size:14px; letter-spacing:.06em; text-transform:uppercase; }
+    .compare td[data-label]::before { content:attr(data-label) ": "; font-weight:600; color:var(--muted); }
   }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 </style>
@@ -220,9 +224,9 @@
     <table class="compare">
       <thead><tr><th></th><th>Individual</th><th>Corporate</th></tr></thead>
       <tbody>
-        <tr><td>Best for</td><td>One person or a small team</td><td>An organisation that runs its own Jharokha server</td></tr>
-        <tr><td>Server</td><td>Jharokha's own. Nothing to enter.</td><td>Yours: you enter its address during setup.</td></tr>
-        <tr><td>Where saved screen previews go</td><td>Kept on your computer, encrypted for your Windows account, for 30 days</td><td>Not kept</td></tr>
+        <tr><td>Best for</td><td data-label="Individual">One person or a small team</td><td data-label="Corporate">An organisation that runs its own Jharokha server</td></tr>
+        <tr><td>Server</td><td data-label="Individual">Jharokha's own. Nothing to enter.</td><td data-label="Corporate">Yours: you enter its address during setup.</td></tr>
+        <tr><td>Where saved screen previews go</td><td data-label="Individual">Kept on your computer, encrypted for your Windows account, for 30 days</td><td data-label="Corporate">Not kept</td></tr>
       </tbody>
     </table>
   </div>
